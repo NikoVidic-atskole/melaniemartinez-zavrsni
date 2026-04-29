@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>★ melanie martinez ★</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Montserrat";
+        }
+
+        .nav {
+            width: 100%;
+            height: 75px;
+            background-color: #734550;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 20px;
+            position: fixed;
+            top: 0px;
+            z-index: 30;
+        }
+
+.nav a {
+    margin: auto 40px;   /* Smanjeno s 90px radi uštede prostora */
+    color: white;
+    text-decoration: none;
+    font-size: 16pt;     /* Malo smanjen font za bolji fit */
+}
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .jump a {
+            color: black;
+            font-size: 68pt;
+            position: fixed;
+            bottom: 30px;
+            right: 50px;
+            z-index: 30;
+            text-decoration: none;
+        }
+
+        .logo-main {
+            width: 350px;
+            padding: 0px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40pt;
+            margin: 130px auto 0px auto
+        }
+
+        h2 {
+            margin: 30px;
+            font-size: 30pt;
+        }
+        
+        .bio {
+            width: 100%;
+            margin-top: 10px;
+            background-image: linear-gradient(white, #fff3f5, #ffb7c8, #ffb7c8, #ffb7c8, #fff3f5, white);
+            overflow: auto;
+            height: 600px;
+        }
+
+        .bio p {
+            font-size: 18pt;
+            margin: auto 80px auto 30px;
+            font-family: "Inter";
+            text-align: justify;
+        }
+
+        .slideshow {
+            width: 450px;
+            height: 450px;
+            background: url(slike/Melanie-Voice-era.png);
+            animation: prijelaz 13s infinite;
+            float: right;
+            margin: -20px 80px;
+        }
+
+        @keyframes prijelaz {
+            25% {
+                background: url(slike/Melanie-Crybaby-era.jpg);
+            }
+            50% {
+                background: url(slike/Melanie-K12-era.jpg);
+            }
+            75% {
+                background: url(slike/Melanie-PORTALS-era.png);
+            }
+            100% {
+                background: url(slike/Melanie-Voice-era.png);
+            }
+        }
+
+        #crybaby {
+            height: 100px;
+        }
+
+        .crybaby {
+            width: 100%;
+            background-image: linear-gradient(white, #d7e8ff, #bdd5ff, #bdd5ff, #b6d0fd, #bdd5ff, #bdd5ff, #d7e8ff, white);
+        }
+
+.crybaby img, .k12 img, .portals img {
+    max-width: 80%;     
+    height: auto;
+    float: none;         
+    display: block;
+    margin: 10px auto;
+	transform: scale(100%);
+            transition: 0.25s transform ease;
+}
+
+@media (min-width: 1200px) {
+    .crybaby img, .k12 img, .portals img {
+        float: right;
+        margin: 10px 100px;
+        width: 350px;
+    }
+}
+        
+        .crybaby img:hover {
+            transform: scale(115%);
+            transition: 0.25s transform ease;
+        }
+
+        .crybaby li {
+            font-size: 18pt;
+            margin: auto 50px auto 30px;
+            font-family: "Inter";
+            text-align: justify;
+        }
+
+        .crybaby ul {
+            list-style-type:square;
+        }
+
+        .cstandard {
+            width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+        }
+
+        .cstandard tr, td {
+            font-size: 16pt;
+            padding: 8px 15px; /* Manji padding za bolju preglednost */
+            font-weight: 500;
+        }
+
+        a, td a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #k12 {
+            height: 80px;
+        }
+
+        .k12 {
+            width: 100%;
+            background-image: linear-gradient(white, #ffdcef, #ffc0e3, #ffa7d7, #ffc0e3, #ffdcef, white);
+        }
+
+        .k12 img {
+            float: right;
+            width: 450px;
+            margin: 30px 130px;
+            transform: scale(100%);
+            transition: 0.25s transform ease;
+        }
+
+        .k12 img:hover {
+            transform: scale(115%);
+            transition: 0.25s transform ease;
+        }
+
+        .k12 li {
+            font-size: 18pt;
+            margin: auto 50px auto 30px;
+            font-family: "Inter";
+        }
+
+        .k12 ul {
+            list-style-type:square;
+        }
+
+        .kstandard {
+            width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+        }
+
+        .kstandard tr, td {
+            font-size: 16pt;
+            padding: 8px 15px; /* Manji padding za bolju preglednost */
+            font-weight: 500;
+        }
+
+        .film:hover {
+            text-decoration: underline;
+            color: #734550;
+            cursor: alias;
+        }
+
+        video {
+    	width: 90%;          /* Video će zauzimati 90% širine ekrana */
+    	max-width: 1120px;   /* Ali neće ići preko originalne veličine */
+    	height: auto;        /* Automatska visina održava omjer slike */
+    	display: block;
+    	margin: 20px auto;   /* Centriranje videa */
+    	position: static;    /* Uklonite absolute pozicioniranje */
+	}
+
+        #portals {
+            height: 80px;
+        }
+
+        .portals {
+    width: 100%;
+color: white;
+    min-height: 100vh;     
+background: linear-gradient(white 0%, #163519 15%, #061808 50%, #163519 85%, white 100%);
+    background-attachment: scroll; /* Gradijent se kreće s tekstom */
+    overflow: auto;
+padding-top: 50px; /* Daje prostora tekstu na dnu da ne dodiruje kraj gradijenta */
+    padding-bottom: 170px; /* Daje prostora tekstu na dnu da ne dodiruje kraj gradijenta */
+}
+
+        .portals img:hover {
+            transform: scale(115%);
+            transition: 0.25s transform ease;
+        }
+
+        .portals a {
+            color: white;
+        }
+
+        .portals li {
+            font-size: 18pt;
+            color: white;
+            margin: auto 50px auto 30px;
+            font-family: "Inter";
+        }
+
+        .portals ul {
+            list-style-type:square;
+        }
+
+        .pstandard {
+            color: white
+margin: 40px auto;
+    width: 80%; /* Centrirat će tablicu i ostaviti mjesta sa strana */
+    border-collapse: collapse;
+        }
+
+        .pstandard tr, td {
+            font-size: 16pt;
+            padding: 8px 15px; /* Manji padding za bolju preglednost */
+            font-weight: 500;
+        }
+
+        #epovi {
+            height: 80px;
+        }
+
+        .epovi {
+            width: 100%;
+    min-height: 100vh; /* Zauzima barem cijelu visinu ekrana */
+    background-image: linear-gradient(white, #ffddb3, #ffc988, #ffbf71, #ffc988, #ffddb3, white);
+    padding-bottom: 50px; /* Malo razmaka prije footera */
+    overflow: hidden; /* Čisti float ako ga koristite */
+        }
+
+        .epovi img {
+    width: 350px;           /* Fiksna širina */
+    height: 350px;          /* Fiksna visina - ovo ih stavlja u isti red */
+    object-fit: cover;      /* Reže višak slike bez da ju rasteže */
+    display: block;
+    transition: 0.25s transform ease;
+}
+
+        .epovi img:hover {
+            transform: scale(105%);
+            transition: 0.25s transform ease;
+        }
+
+        .ep123 {
+    display: flex;          /* Slaže elemente jedan pored drugog */
+    justify-content: center; /* Centrira cijelu grupu na sredinu stranice */
+    align-items: flex-start; /* Ključno: Poravnava sve albume po gornjem rubu */
+    gap: 30px;              /* Razmak između albuma */
+    width: 100%;
+    padding: 20px;
+}
+
+.ep {
+    flex: 0 0 350px;        /* Svaki album ima fiksnu širinu, pa se neće prelijevati */
+    display: flex;
+    flex-direction: column; /* Sadržaj unutar albuma ide jedan ispod drugog */
+    align-items: center;    /* Centrira sliku i tekst unutar albuma */
+}
+
+        .ep h3 {
+    margin: 20px 0; 
+    font-size: 18pt;
+    text-align: center;
+    min-height: 50px; /* Ovo rezervira isti prostor za naslov čak i ako je u jednom redu */
+}
+
+        .footer {
+            margin-top: 130px;
+            width: 100%;
+            height: 50px;
+            background-color: #734550;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px 15px; /* Manji padding za bolju preglednost */
+}
+    </style>
+</head>
+<body>
+    <!--    NAVIGACIJA     -->
+    <div class="nav" id="nav">
+        <a href="#crybaby">Crybaby</a>
+        <a href="#k12">K-12</a>
+        <a href="#bio" class="logo"><img src="slike/logo.png" class="logo-main" id="logo"></a>
+        <a href="#portals">PORTALS</a>
+        <a href="#epovi">EP-ovi</a>
+    </div>
+
+    <div class="jump">
+        <a href="#bio">⇑</a>
+    </div>
+
+    <!--    BIOGRAFIJA     -->
+    <div class="naslov">
+        <h1 id="bio">Melanie Martinez</h1>
+    </div>
+
+    <div class="bio">
+        <h2>Biografija</h2>
+            <div class="slideshow"></div>
+            <p>
+            <b>Melanie Adele Martinez</b> (28. 4. 1995. | Queens, New York, SAD) američka je kantautorica, scenaristica, pjesnikinja, redateljica, glumica,
+            plesačica, producentica te fotografkinja dominikanskog i portorikanskog podrijetla. <br><br>
+            2012. godine pojavila se na audiciji za 3. sezonu američkog televizijskog vokalno talent showa <i>The Voice</i> 
+            te postala članica tima Adam Levine, gdje je njezina popularnost brzo rasla među obožavateljima. 
+            Unutar petog tjedna eliminirana je iz natjecanja, što ju je kasnije potaklo da radi na originalnom materijalu 
+            (<i>Crybaby</i>, <i>K-12</i>, <i>PORTALS</i> i dr.). Poznata je po pisanju pjesama koje govore o društvenim temama i problemima. <br><br>
+            Imala je veliku zbirku igračaka kroz djetinjstvo, koje sada upotrebljava za svoje ogrlice i izloge u video spotovima. 
+            Od mlade dobi počela se baviti s poezijom i htjela postati pjevačica.
+            Završila je srednju školu u Baldwinu. Sa 16 godina obojila je kosu pola u plavo, pola u crno. 
+            Inspiracija za takvu kosu bila je Cruella de Vil iz Disneyevog klasika iz 1961. godine <i>101 Dalmatinac</i>.
+            </p>
+    </div>
+
+    <!--    CRYBABY ALBUM     -->
+    <div id="crybaby"> </div>
+    <div class="crybaby">
+        <h2><i>Crybaby</i> (2015.)</h2>
+            <img src="slike/Crybaby.jpg">
+            <ul>
+                <li>
+                    Debi album kojim Martinez uvodi priču lika <i>Crybaby</i>, mlade djevojčice koju vršnjaci ismijavaju zbog dijasteme (razmaka između sjekutića) te koja svoj nadimak dobiva od konstantnog plača i boli.
+                </li>
+                <li>
+                    Ovaj album obrađuje teme vršnjačkog nasilja, teškog djetinjstva, previsokih standarda ljepote, prijateljske izdaje te nesretne ljubavi.
+                </li>
+            </ul>
+            <table class="cstandard">
+                <tr>
+                    <td>1.</td>
+                    <td><a href="https://open.spotify.com/track/57cf51mdLfU4nr0dOTrGIS?si=34e80627ef58464c" target="_blank">"Crybaby"</a></td>
+                    <td>3:59</td>
+                    <td> </td>
+                    <td style="font-size: 16pt; font-weight: 700;" colspan="2">Deluxe:</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td><a href="https://open.spotify.com/track/5c2K1nWYNUpYYzLydJPzQX?si=847ba4dc154e49da" target="_blank">"Dollhouse"</a></td>
+                    <td>3:51</td>
+                    <td> </td>
+                    <td>14.</td>
+                    <td><a href="https://open.spotify.com/track/4DpNNXFMMxQEKl7r0ykkWA?si=035f538c32ff480e" target="_blank">"Play Date"</a></td>
+                    <td>2:59</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td><a href="https://open.spotify.com/track/0oycDs0IOP1rFF2QASILlT?si=96798b4db999426a" target="_blank">"Sippy Cup"</a></td>
+                    <td>3:15</td>
+                    <td> </td>
+                    <td>15.</td>
+                    <td><a href="https://open.spotify.com/track/10Lu5P0waAD6jc9u9HycU0?si=c6d1d63f4f4c46fe" target="_blank">"Teddy Bear"</a></td>
+                    <td>4:05</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td><a href="https://open.spotify.com/track/3QezITzjOp5l70CLdu7WQ8?si=24887de3293f42f4" target="_blank">"Carousel"</a></td>
+                    <td>3:50</td>
+                    <td> </td>
+                    <td>16.</td>
+                    <td><a href="https://open.spotify.com/track/5H3TCfiw0CQTX1XU7A9TXM?si=eb557b5ea8eb4998" target="_blank">"Cake"</a></td>
+                    <td>3:19</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td><a href="https://open.spotify.com/track/64tcymNxzRAgcytMFjb3GD?si=47e9ab65430c40ac" target="_blank">"Alphabet Boy"</a></td>
+                    <td>4:13</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td><a href="https://open.spotify.com/track/1rpTtXVHvhcFY6hnV0tu9Q?si=b856dfba018e4371" target="_blank">"Soap"</a></td>
+                    <td>3:29</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td><a href="https://open.spotify.com/track/5JONEypmAJ9khrFYc6FQBo?si=9c2c453c87174fb3" target="_blank">"Training Wheels"</a></td>
+                    <td>3:25</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td><a href="https://open.spotify.com/track/2FDCA0X7z9n88EdpzND5RM?si=ebfe09d4d131408d" target="_blank">"Pity Party"</a></td>
+                    <td>3:24</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td><a href="https://open.spotify.com/track/12fymjM3b9sI38aAgzcZep?si=c116816fab4449ab" target="_blank">"Tag, You're It"</a></td>
+                    <td>3:09</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td><a href="https://open.spotify.com/track/0fI1SipMkZBTfoMt5CzZU0?si=353cfe919d5c4210" target="_blank">"Milk and Cookies"</a></td>
+                    <td>3:26</td>
+                </tr>
+                <tr>
+                    <td>11.</td>
+                    <td><a href="https://open.spotify.com/track/538ygXRqMlIPEEABVbWGue?si=44960832efbc4c06" target="_blank">"Pacify Her"</a></td>
+                    <td>3:40</td>
+                </tr>
+                <tr>
+                    <td>12.</td>
+                    <td><a href="https://open.spotify.com/track/5wvDqcZpergVLMF3yOwlRD?si=3b931c110e3942b7" target="_blank">"Mrs. Potato Head"</a></td>
+                    <td>3:37</td>
+                </tr>
+                <tr>
+                    <td>13.</td>
+                    <td><a href="https://open.spotify.com/track/0rGJnRw9PkB2BvQn1yT3Jo?si=70d6551062ea45a8" target="_blank">"Mad Hatter"</a></td>
+                    <td>3:21</td>
+                </tr>
+            </table>
+    </div>
+    <!--    K12 ALBUM     -->
+    <div id="k12"> </div>
+    <div class="k12">
+        <h2><i>K-12</i> (2019.)</h2>
+
+            <video src="trailer.mp4" controls type="video/mp4">Uh oh! Preglednik ne podržava video!</video>
+
+            <img src="slike/K-12.jpg">
+            <ul>
+                <li>
+                    Drugi studijski album u kojem <i>Crybaby</i> kreće u školu te tamo radi nova prijateljstva i ljubavi, ali se i sukobljava sa školskim sustavom te neprijateljima iz razreda.
+                </li>
+                <li>
+                    Album obrađuje teme vršnjačkog nasilja, problema u pubertetu, lažnih prijateljstava te zaljubljenosti.
+                </li>
+                <li>
+                    Ovaj album prati i <a href="https://youtu.be/2HtaIvb61Uk?si=OyRpWyBhJWBraU3_" target="_blank" class="film">istoimeni dugometražni film</a> kojeg je režisirala sama Martinez koji u sebi ima uklopljene pjesme albuma.
+                </li>
+            </ul>
+            <table class="kstandard">
+                <tr>
+                    <td>1.</td>
+                    <td><a href="https://open.spotify.com/track/0dbf5B9PtL5MeFfRyWPsLt?si=80cf8ad7e07f4f3f" target="_blank">"Wheels on the Bus"</a></td>
+                    <td>3:40</td>
+                    <td> </td>
+                    <td style="font-size: 16pt; font-weight: 700;" colspan="2">Deluxe:</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td><a href="https://open.spotify.com/track/6fNPdAuqp0kT4K5kYaAFBz?si=283843d6fa814217" target="_blank">"Class Fight"</a></td>
+                    <td>2:41</td>
+                    <td> </td>
+                    <td>14.</td>
+                    <td><a href="https://open.spotify.com/track/5qLjcPwpJ1cisCDbmqM6xZ?si=504909401d724960" target="_blank">"Notebook"</a></td>
+                    <td>2:30</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td><a href="https://open.spotify.com/track/3Mlo5Lkox2j3h8QNv8ME9k?si=f5da1e8dd3514cef" target="_blank">"The Principal"</a></td>
+                    <td>2:56</td>
+                    <td> </td>
+                    <td>15.</td>
+                    <td><a href="https://open.spotify.com/track/0qwIK0NvfyTzcZcmKRuHYo?si=43909559da064855" target="_blank">"Test Me"</a></td>
+                    <td>2:54</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td><a href="https://open.spotify.com/track/5cLv0NWK24LjXHOYq8AU9m?si=2e1b7d37cd204dfc" target="_blank">"Show & Tell"</a></td>
+                    <td>3:35</td>
+                    <td> </td>
+                    <td>16.</td>
+                    <td><a href="https://open.spotify.com/track/3hsOzsLN8IlNRcB7RWMaqI?si=3b647fe2312641fb" target="_blank">"Brain & Heart"</a></td>
+                    <td>3:23</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td><a href="https://open.spotify.com/track/3GXAn5R5bDwCyvcqCEKA14?si=c7a9574b7e2a4b91" target="_blank">"Nurse's Office"</a></td>
+                    <td>3:22</td>
+                    <td> </td>
+                    <td>17.</td>
+                    <td><a href="https://open.spotify.com/track/2Wvj66BRbQeP7C4GA6HQ42?si=78ce26e09be84e67" target="_blank">"Numbers"</a></td>
+                    <td>4:39</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td><a href="https://open.spotify.com/track/1CJi5Q9UMZVhogJ19cPJiI?si=5e9a9c9a9a5349af" target="_blank">"Drama Club"</a></td>
+                    <td>3:45</td>
+                    <td> </td>
+                    <td>18.</td>
+                    <td><a href="https://open.spotify.com/track/4gzcSRENhOMlS9Ol1FYIl7?si=348fba44c1d94409" target="_blank">"Glued"</a></td>
+                    <td>3:12</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td><a href="https://open.spotify.com/track/1qj003X4Cf0R7Ggs7QC241?si=72184ba369994d1c" target="_blank">"Strawberry Shortcake"</a></td>
+                    <td>3:04</td>
+                    <td> </td>
+                    <td>19.</td>
+                    <td><a href="https://open.spotify.com/track/3y3kJe6x18SnXvP4jxyrib?si=9bb0f44051654ec5" target="_blank">"Field Trip"</a></td>
+                    <td>3:00</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td><a href="https://open.spotify.com/track/0LHPekHuEaRxfmATmlynuz?si=5ddb120c41cb4aec" target="_blank">"Lunchbox Friends"</a></td>
+                    <td>2:49</td>
+                    <td> </td>
+                    <td>20.</td>
+                    <td><a href="https://open.spotify.com/track/5xlntPcXIDzcpHZjpQKcU2?si=b4bb61333dff45a2" target="_blank">"The Bakery"</a></td>
+                    <td>2:34</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td><a href="https://open.spotify.com/track/0ZrDteshtSVHrzze4UDPnx?si=2e16a12f75d744f4" target="_blank">"Orange Juice"</a></td>
+                    <td>3:37</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td><a href="https://open.spotify.com/track/64whg1dsPbYLBxJSHv78it?si=b8e6f8a0ecbc466b" target="_blank">"Detention"</a></td>
+                    <td>3:56</td>
+                </tr>
+                <tr>
+                    <td>11.</td>
+                    <td><a href="https://open.spotify.com/track/35L17TzByrjXp9f7KFM5fT?si=9aed161704d54ee6" target="_blank">"Teacher's Pet"</a></td>
+                    <td>4:01</td>
+                </tr>
+                <tr>
+                    <td>12.</td>
+                    <td><a href="https://open.spotify.com/track/5qNsHPdFgCk0KYMlcBlOdu?si=984b6f61a3f142ae" target="_blank">"High School Sweethearts"</a></td>
+                    <td>5:11</td>
+                </tr>
+                <tr>
+                    <td>13.</td>
+                    <td><a href="https://open.spotify.com/track/5uekrbFEFj6QNYGYXNrVzo?si=a3f7b24ceb5c4b7a" target="_blank">"Recess"</a></td>
+                    <td>3:51</td>
+                </tr>
+            </table>
+        </div>
+
+        <!--    PORTALS ALBUM       -->
+        <div class="portals">
+        <div id="portals"> </div>
+        <h2><i>PORTALS</i> (2023.)</h2>
+            <img src="slike/PORTALS.png">
+            <ul>
+                <li>
+                    Treći studijski album gdje <i>Crybaby</i> umire, ali bude preporođena kao magično vilinsko biće s 4 oka.
+                </li>
+                <li>
+                    Album obrađuje teme smrti, grižnje savjesti, prave ljubavi, iskorištavanja i preporoda. 
+                    Također, album se sastoji od 13 pjesama koje između sebe imaju glatke audio prijelaze te koje simboliziraju 13 tjedana od začeća kad se događa najveći razvoj ljudskog bića.
+                </li>
+                <li>
+                    Trenutno je u planu istoimeni film istog koncepta kao prijašnji album i film.
+                </li>
+            </ul>
+            <table class="pstandard">
+                <tr>
+                    <td>1.</td>
+                    <td><a href="https://open.spotify.com/track/1y56hd5fCuL5jCjjbRyGMN?si=f05804c4e2cd4587" target="_blank">"DEATH"</a></td>
+                    <td>5:06</td>
+                    <td> </td>
+                    <td style="font-size: 16pt; font-weight: 700;" colspan="2">Deluxe:</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td><a href="https://open.spotify.com/track/6bbjMFCiXYhTRCfclucV4S?si=0bbeede5a6a44fc6" target="_blank">"VOID"</a></td>
+                    <td>4:07</td>
+                    <td> </td>
+                    <td>14.</td>
+                    <td><a href="https://open.spotify.com/track/4m73pw2oGfhOfBsO5Vbf7f?si=b84adf0806d34036" target="_blank">"POWDER"</a></td>
+                    <td>3:58</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td><a href="https://open.spotify.com/track/6b6lS6QFGPzJl4bZF8cFvG?si=2c8d00b0f20b4b32" target="_blank">"TUNNEL VISION"</a></td>
+                    <td>4:44</td>
+                    <td> </td>
+                    <td>15.</td>
+                    <td><a href="https://open.spotify.com/track/6Z6mjsCgIcFb3JBOxHBcn9?si=5f1f1c05f1c942c2" target="_blank">"PLUTO"</a></td>
+                    <td>3:01</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td><a href="https://open.spotify.com/track/7MHGAXUgPQdVvMyvZaCf8q?si=8fb9d313501042a2" target="_blank">"FAERIE SOIRÉE"</a></td>
+                    <td>2:43</td>
+                    <td> </td>
+                    <td>16.</td>
+                    <td><a href="https://open.spotify.com/track/1AUyzuh7CIr1yDYPTOgQQL?si=11e5e891192648cd" target="_blank">"MILK OF THE SIRENS"</a></td>
+                    <td>4:25</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td><a href="https://open.spotify.com/track/7i4d3U00ZP4EsQrRGt2Ul1?si=515c4797186a4ec9" target="_blank">"LIGHT SHOWER"</a></td>
+                    <td>4:27</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td><a href="https://open.spotify.com/track/77wA2WR0WudvUTzeBGYh3d?si=e9f011b71e724675" target="_blank">"SPIDER WEB"</a></td>
+                    <td>3:03</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td><a href="https://open.spotify.com/track/3pKoeYvCMKWYaGTioRIJav?si=9c6cde3f906f43c5" target="_blank">"LEECHES"</a></td>
+                    <td>3:20</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td><a href="https://open.spotify.com/track/6ibZ3C1WXz5CzFYO7qaFS5?si=8d471e4d80264cef" target="_blank">"BATTLE OF THE LARYNX"</a></td>
+                    <td>5:28</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td><a href="https://open.spotify.com/track/0ZwAVBeZOQSHsugnvVKDFo?si=66995b1ee3564d13" target="_blank">"THE CONTORTIONIST"</a></td>
+                    <td>3:20</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td><a href="https://open.spotify.com/track/3eRKfT1c4Y19QG7dno62R1?si=b7af129f7fb54851" target="_blank">"MOON CYCLE"</a></td>
+                    <td>2:32</td>
+                </tr>
+                <tr>
+                    <td>11.</td>
+                    <td><a href="https://open.spotify.com/track/0hSE8bQYBYieW1p9jSK6gm?si=ebf839c50f53458f6" target="_blank">"NYMPHOLOGY"</a></td>
+                    <td>5:06</td>
+                </tr>
+                <tr>
+                    <td>12.</td>
+                    <td><a href="https://open.spotify.com/track/4XKyYy9SDsvWmEXf24aPiu?si=0929c6112c7d4d3b" target="_blank">"EVIL"</a></td>
+                    <td>4:06</td>
+                </tr>
+                <tr>
+                    <td>13.</td>
+                    <td><a href="https://open.spotify.com/track/0qjRMtmN2r1zAVib5drscb?si=1a221a8897294b34" target="_blank">"WOMB"</a></td>
+                    <td>3:31</td>
+                </tr>
+            </table>
+    </div>
+
+    <!--        EPOVI       -->
+    <div id="epovi"> </div>
+    <div class="epovi">
+        <h2>EP-ovi</h2>
+        <div class="ep123">
+            <div class="ep">
+                <img src="slike/Dollhouse.png" alt="dollhousealt">
+                <table>
+                    <h3><i>Dollhouse</i> (2014.)</h3>
+                    <tr>
+                        <td>1.</td>
+                        <td><a href="https://open.spotify.com/track/3deFSRUdM7JC8P1Fi6r0rY?si=71904a63aba648ba" target="_blank">"Dollhouse"</a></td>
+                        <td>3:52</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td><a href="https://open.spotify.com/track/6fHSRCVaoH9Lel6cIU0Taf?si=1cc764cb0c4a48df" target="_blank">"Carousel"</a></td>
+                        <td>3:50</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td><a href="https://open.spotify.com/track/2L3VnHkRi6ElZL2bqu1nBs?si=9a100f42509b42a7" target="_blank">"Dead to Me"</a></td>
+                        <td>3:30</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td><a href="https://open.spotify.com/track/0PH9AxRz8L7koq9CfrWP5m?si=89c0178ade464942" target="_blank">"Bittersweet Tragedy"</a></td>
+                        <td>4:49</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="ep">
+                <img src="slike/Crybabys-Extra-Clutter.jpg" alt="csecalt">
+                <table>
+                    <h3><i>Crybaby's Extra Clutter</i> (2016.)</h3>
+                    <tr>
+                        <td>1.</td>
+                        <td><a href="https://open.spotify.com/track/4DpNNXFMMxQEKl7r0ykkWA?si=a861c453674d4075" target="_blank">"Play Date"</a></td>
+                        <td>2:59</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td><a href="https://open.spotify.com/track/10Lu5P0waAD6jc9u9HycU0?si=0c936fdf3838495f" target="_blank">"Teddy Bear"</a></td>
+                        <td>4:05</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td><a href="https://open.spotify.com/track/5H3TCfiw0CQTX1XU7A9TXM?si=19ba6d173d774ead" target="_blank">"Cake"</a></td>
+                        <td>3:19</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td><a href="https://open.spotify.com/track/1taY3X7Ifq1989d6eI3raI?si=2cf793461b994178" target="_blank">"Gingerbread Man"</a></td>
+                        <td>3:27</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="ep">
+                <img src="slike/After-School.jpg" alt="csecalt">
+                <table>
+                    <h3><i>After School</i> (2020.)</h3>
+                    <tr>
+                        <td>1.</td>
+                        <td><a href="https://open.spotify.com/track/6pUEp8lDzjN2Jv4BdM9B74?si=ec40a2b24e5d461a" target="_blank">"Notebook"</a></td>
+                        <td>2:31</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td><a href="https://open.spotify.com/track/45x3yuEpjmiqL4SFdT4srk?si=0897d40464174424" target="_blank">"Test Me"</a></td>
+                        <td>2:55</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td><a href="https://open.spotify.com/track/1rBCRenU7dfot8elMagRpO?si=a7c1ff32f04e4d18" target="_blank">"Brain & Heart"</a></td>
+                        <td>3:23</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td><a href="https://open.spotify.com/track/7D0VClhoNONSsdPYWwcTej?si=1caab7e602d24b2a" target="_blank">"Numbers"</a></td>
+                        <td>4:39</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td><a href="https://open.spotify.com/track/2K5vH2WTyDFB6LfkV6505I?si=9b2bf569959c40f8" target="_blank">"Glued"</a></td>
+                        <td>3:13</td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td><a href="https://open.spotify.com/track/722CyeKpgreqBAypTv5U3T?si=b76cb37ca3824b02" target="_blank">"Field Trip"</a></td>
+                        <td>3:01</td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td><a href="https://open.spotify.com/track/3JUeBSM4bsJGwYCVRqMeuC?si=d344359b5103491a" target="_blank">"The Bakery"</a></td>
+                        <td>2:34</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        © Niko Vidić 2024.
+    </div>
+</body>
+</html>
